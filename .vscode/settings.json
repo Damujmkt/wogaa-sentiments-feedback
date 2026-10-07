@@ -1,0 +1,14 @@
+{
+  "cucumber.features": [
+    "features/**/*.feature"
+  ],
+  "cucumber.glue": [
+    "steps/**/*.ts",
+    "fixtures/**/*.ts"
+  ],
+  "editor.quickSuggestions": {
+    "comments": true,
+    "strings": true,
+    "other": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "wogaa-sentiments-playwright-bdd",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright + TypeScript + BDD automation for the WOGAA Sentiments widget.",
+  "scripts": {
+  "bddgen": "bddgen",
+  "pretest": "npm run bddgen",
+  "test:chrome": "npm run bddgen && playwright test --project=web-chrome --grep-invert \"@manual\"",
+  "test:safari": "npm run bddgen && playwright test --project=web-safari-webkit --grep-invert \"@manual\"",
+  "test:mobile": "npm run bddgen && playwright test --project=mobile-web-android --project=mobile-web-ios",
+  "test:tag": "npm run bddgen && playwright test --project=web-chrome --headed --grep-invert \"@manual\"",
+  "test:headed": "playwright test --project=web-chrome --headed --workers=1",
+  "test:debug": "playwright test --project=web-chrome --debug --workers=1",
+  "test": "playwright test",
+  "report": "playwright show-report reports/playwright",
+  "typecheck": "tsc --noEmit"
+},
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^24.7.0",
+    "dotenv": "^17.2.2",
+    "playwright-bdd": "^9.2.1",
+    "typescript": "^5.9.2"
+  }
+}
